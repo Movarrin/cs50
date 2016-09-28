@@ -1,0 +1,1392 @@
+>> [VIDEO PLAYBACK]
+>> [CAR DOOR SHUTTING]
+>> [CAR ENGINE STARTING]
+>> [MUSIC PLAYING]
+>> -Moving right along in search of good times and good news.
+With good friends you can't lose.
+>> -This could become a habit.
+>> -Opportunity knocks Let's just reach out and grab it.
+-Yeah!
+-Together we'll nab it.
+-We'll hitch hike, bus, or yellow cab it.
+-Dammit.
+-We're moving right along.
+-Footloose and fancy free.
+-Getting there is half the fun.
+Come share it with me.
+>> -We're moving right along.
+>> -We're going to share the load.
+>> -We don't need a map to get this show on the road.
+-Hey Fozzy, I want you to turn left if you come to a fork in the road.
+-Yes, sir.
+Turn left at the fork in the road.
+Turn left.
+>> -I don't believe that.
+>> -Cruising right along we found the lights on the highway.
+>> -And your way or my way.
+>> -So trust my navigation.
+>> -Movie stars with flashy cars and life with the top down.
+>> -We're storming the big hills.
+>> -Yeah, storm is right.
+Should it be snowing?
+>> -No, I don't think so.
+>> -Moving right along.
+>> -Footloose and fancy free.
+>> -You're ready for the big time.
+>> -Is it ready for me?
+>> -Moving right along.
+Moving right along.
+Moving right along.
+Moving right along.
+-I think you better pull over.
+-Yes, sir.
+>> [END PLAYBACK]
+>> [APPLAUSE]
+>> DAVID J. MALAN: This is CS50.
+And this is the end of Week 0, but the start of a beautiful friendship.
+We are so excited to be here at Yale University
+for the very first time with our friend Scaz, and Jason, and Andy.
+All 40 of CS50's TF's and CA's here at Yale.
+And all of you.
+And in fact, it's probably time to--
+>> [APPLAUSE]
+>> So, even though most of the lectures will indeed be in Cambridge this year,
+the reality is that by design, and very much deliberately in CS50,
+I do think we're nearing the point technologically, and pedagogically,
+where it can be a superior educational experience to engage with some
+of the course's material online.
+Indeed, the reality-- and if I believe this philosophically-- is that lectures
+are not a particularly effective means for delivering
+fairly complex information.
+Certainly over hour plus long spans of time.
+And indeed every few minutes-- I remember myself in college--
+you zone out for a moment, you miss some complex topic,
+and you're gone pretty much for the next 45 minutes.
+And the reality is that whether you're here in New Haven or Cambridge
+or beyond, the simplicity of having the ability to pause and fast forward,
+rewind, hyperlink to related resources, search full text transcripts
+and the like is an opportunity that I dare say for our online students
+well beyond New Haven, offers them an opportunity
+to really grasp the conceptual material that we
+introduce in lectures all the better.
+>> But ultimately in CS50, is the students' experience
+is characterized so, so much more by the course's problem sets,
+or weekly programming projects, the course's sections led by the teaching
+fellows, the nightly office hours led by the course assistants and the teaching
+fellows, and indeed such events as CS50 Puzzle
+Day, CS50's Hack-a-thon, the CS50 Fair, weekly lunches, and so much more.
+And so whether you're here in New Haven, or tuning in from afar,
+today in Cambridge, and we'll see you again soon,
+the reality is this is one and the same class.
+And we are so excited to be here all together today.
+And so at the end of the semester, whether here or afar, well
+hopefully you wear proudly, happily, and perhaps with a bit of relief,
+the shirt that bears witness to you having taken CS50.
+>> So where did we leave off on Wednesday?
+We took a look at computational thinking.
+And that's toward what we distilled computer science unto, at least
+for now.
+But we distilled it little further into at least three components elements.
+>> Inputs, so what is the problem we're trying to solve?
+Outputs, what is the answer we're hoping to get?
+And the representation there of.
+And we won't dwell here on after on binary, or even ASCII,
+and the like so much, but rather take for granted
+that we can represent this information, because the far more interesting parts
+of those problems are not just the inputs and outputs, but the algorithms
+that go into solving those problems.
+>> And you might recall from the other day that we
+took a fairly traditional concept of looking someone up
+in a fairly large phone book, or more generally digitally these days,
+just a very large data set.
+A really big contacts list, with lots of names alphabetically sorted.
+And we realized that while I could approach this problem simply
+by using a linear approach-- page by page,
+or even two's at a time-- we realized that the more intuitive algorithm--
+just kind of dividing and conquering the problem again, and again,
+and again-- halving it with each time, gave us this green result.
+And it's so much flatter because it suggests
+that even as this problem gets bigger and bigger,
+as is the case these days with data sets and reality-- Facebook and Google
+search results and the like-- does our algorithm
+perform just as effectively with those bigger bites
+as it did even with the smaller bites.
+>> Now it begs the question, what can we actually solve similarly
+with this kind of intuition?
+This sort of division and conquering?
+Well, we could do something like this today here.
+We could take attendance.
+So maybe like 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11--
+not going to be all that efficient.
+So wait, grade school.
+2, 4, 6, 8, 10, 12, 14, 16, 18 and so forth.
+But could we do a little better?
+>> I'm pretty sure I can't do this by myself.
+So if you'll humor us for just a moment, we brought with us
+an algorithm that's just got three steps,
+but it does require-- if you don't mind-- all of us stand up,
+if you would.
+So, with all of us now standing, step one of this algorithm is the following.
+Stand up and assign yourself the number 1.
+So at this point in time, literally everyone in this room
+hopefully is thinking to themselves, however awkwardly, the number 1.
+>> Now step two of this algorithm is going to involve the following.
+Step two, pair off with someone standing,
+add your numbers together, and adopt the sum as your new number.
+Quick sanity check.
+What number is everyone thinking of now?
+>> So 2, except maybe for one, awkward, lonesome person.
+If we have an odd number of people in the room.
+So one person might still be the number 1, that's fine.
+But step three here, one of you should sit down.
+The other should go back to step two, and repeat, if you would.
+>> So if still standing, you should be among those going back to step two.
+Keep going.
+A few people still standing.
+>> So, if still standing, pair up with someone.
+All right, dwindling down.
+A few people still standing.
+I'll help if need be.
+Remember the key takeaway here, is how much faster this is than me counting.
+>> So let's see.
+I can help out.
+So what number are you still thinking of?
+>> AUDIENCE: I'm at 44.
+>> DAVID J. MALAN: 44, so you go ahead and sit down.
+What number are you thinking of?
+AUDIENCE: 74.
+>> DAVID J. MALAN: 74.
+All right, go ahead and sit down.
+Who else is still standing?
+86.
+And is anyone else still standing?
+>> What number?
+I heard 67.
+And then in top?
+32.
+Anyone else still standing and thinking of a number?
+>> Oh, hi.
+Sorry.
+Be right back.
+42.
+Anyone else?
+>> AUDIENCE: 47.
+>> DAVID J. MALAN: 47.
+Is anyone else still standing who hasn't been counted?
+So the final number of people in a room that has 497 seats is-- all of which
+are filled-- is 390.
+So this is great.
+>> We will soon discuss the notion of a bug in a computer program.
+But we'll come back to that before long.
+But in theory, what might have happened just now?
+So even though there were three big steps to this algorithm, each of those
+was just kind of one big operation.
+And there was this cyclicity to it in that if you were still standing,
+you kept going from step three to two, step three to two, step three to two.
+>> But what kept happening on each iteration?
+Each cycle of this loop?
+What was happening elsewhere in the room?
+Not only the same thing, but what was happening to half of you?
+Sitting down.
+And so there in lies this insight, much like the phone book example,
+in that if half of you are sitting down each time,
+the problem is starting with maybe 400 people,
+then to 200 people, than 100 people, then 50 people, and so forth.
+>> And so we whittle down in theory to just one person,
+thinking of the total value of everyone.
+Now reality, some social dynamics, and some arithmetic errors
+might contribute to that ultimate bug.
+But in theory, while I was still counting away,
+taking several dozen steps, or hundreds of steps
+to count yourselves, to count a roomful of 500 or so people
+should have taken far fewer steps, because you can only divide 500 and 1/2
+so many times.
+And so just like with the phone book example the other day,
+did we have something logarithmic so to speak,
+whereby if we were all operating in unison,
+and ignoring the addition errors, would we
+have achieved exactly that kind of running time?
+>> Now to be fair, kind of cheated, in that I leveraged another resource.
+Whereas it's just one of me, I leveraged hundreds of you.
+But that might be said to be an example of parallel processing,
+or a state of art very much in vogue where computers these days have
+multiple CPUs, or more technically, more multiple cores,
+and can truly do multiple things at once, much like you
+all we're doing there, in parallel.
+But recall that what we also did on Wednesday
+was try to capture this intuition and formalize it in code.
+Something like pseudo-code.
+And in fact, and I hope you'll forgive, it's like 80 degrees in here.
+So I'm going to take this off for just a little bit.
+What I thought we'd do is transition now to an application whereby
+we again engage the audience, but write a program in English
+like syntax, with which to solve this problem here.
+[VIDEO PLAYBACK]
+-It's peanut butter jelly time.
+Peanut butter jelly time.
+Peanut butter jelly time.
+>> Way ya!
+Way ya!
+Way ya!
+Way ya!
+Now there you go!
+There you go!
+There you go!
+There you go!
+Peanut butter jelly!
+Peanut butter jelly!
+>> Peanut butter jelly!
+Peanut butter jelly!
+Peanut, peanut butter jelly!
+Peanut butter jelly!
+Peanut butter jelly with a baseball bat.
+>> [END PLAYBACK]
+DAVID J. MALAN: --that video, but it is a little addictive,
+if not a bit annoying.
+But to do this, I thought what we'd do is try to write a program together,
+for which we need three volunteers.
+Have to be comfortable on camera and internet.
+Sam, come on up.
+Purple shirt, right here, come on up.
+>> And from over here, let me go a little farther back.
+Crimson and blue shirts, come on up.
+Perfect.
+Come on now.
+Come on up, come on up.
+>> And what's your name?
+Erica.
+David, nice to meet you.
+If you'd like to take this seat here.
+This is Sam.
+>> What's your name?
+Antonio.
+Antonio, nice to meet you.
+Erica and Sam, if you'd like to have a seat here.
+What we've come prepared with, as these guys are discovering,
+is the ingredients with which to make a peanut butter and jelly sandwich.
+>> Now this might be something that you take very much for granted.
+But we've given each of our three volunteers
+here-- two volunteers and Sam here, a loaf of bread each, a plate, a knife,
+a jar of jelly or jam, and a jar of peanut butter.
+And the goal at hand now is going to be for these three
+to make a peanut butter and jelly sandwich.
+But what we're going to do is expect the audience-- since all of you
+surely know how to do this so well in reality--
+are going to provide us with the step by step instructions.
+The pseudo-code, if you will.
+>> So I'll play the role of scribe here.
+And I've got a little to-do list, and so as each of you, one at a time,
+calls out a potential instructional, I'll
+write it down, repeat it as needed.
+And then you guys are going to make a peanut butter and jelly sandwich
+only by doing what you are told.
+So think of yourselves as computers.
+>> You can only do what you're told.
+No assumptions, no questions.
+You just need to do it.
+So who would like to hazard the first instruction for making a PBJ sandwich?
+On the balcony there.
+>> AUDIENCE: Open the bag of bread.
+>> DAVID J. MALAN: Open the bag of bread, if you will.
+So let's see.
+Let's iterate, and get a little more precise.
+>> Good way to begin though.
+Step two, someone else.
+Now no one wants to volunteer.
+Step two, in front.
+AUDIENCE: Open the inner bag of bread as well.
+DAVID J. MALAN: Open the inner bag of bread as well.
+Great, we learning.
+A little more precise.
+Let's get this working.
+Yes, in green shirt.
+>> AUDIENCE: [INAUDIBLE]
+DAVID J. MALAN: Slices of bread.
+Gently remove two slices of bread.
+That's good.
+Step four, someone else?
+Over here, yes?
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: Place bread on plate.
+Step five?
+Step five, yeah?
+>> AUDIENCE: [INAUDIBLE]
+DAVID J. MALAN: On top of-- oh, hand.
+Place hand on top of peanut butter.
+Is that what I head?
+>> AUDIENCE: Yeah, and unscrew.
+>> DAVID J. MALAN: And-- say it again.
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: And put the lid next to the peanut butter.
+Lightly place hand on top of peanut butter,
+and unscrew, and put the lid next to the peanut butter.
+OK, step six.
+Step six, someone else.
+Yeah?
+>> AUDIENCE: [INAUDIBLE]
+DAVID J. MALAN: Say it again.
+AUDIENCE: Repeat step five again.
+DAVID J. MALAN: And repeat step five again,
+which is going to create a bit of a problem
+now if we're doing this step by step.
+So now we go back to step five.
+Lightly place hand on top of peanut butter and unscrew
+and put lid next to the peanut butter.
+Then grasp the peanut butter and repeat step five again.
+>> So we'll override that infinite loop, if you will.
+Step seven, someone else.
+Yeah, in back.
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: --on top of other.
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: On the other hand on the other top.
+Do you want to just come up here?
+How do I finish the instruction?
+What's the rest of the instruction?
+>> AUDIENCE: Ignoring that part.
+>> DAVID J. MALAN: Ignoring that part.
+Let's start over.
+Step seven.
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: Grasp with opposing hand-- this is good.
+This is actually good.
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: And plastic jar--
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: And twist--
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: For two seconds.
+Just open the peanut butter jar.
+I hope you'll forgive.
+So let's assume we got there.
+Open the peanut butter jar.
+>> [APPLAUSE]
+>> DAVID J. MALAN: Step eight, let's go.
+Step eight, yes, in back.
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: Good.
+Step nine, yes?
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: --out of the peanut butter jar.
+And-- and what?
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: And put knife back into peanut butter.
+Step ten.
+Step ten.
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: Put the knife out, and then remove the seal.
+Nice.
+Off the peanut butter.
+All right, step 11.
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: OK, grey computer follow blue or red computer.
+Good.
+>> [APPLAUSE]
+DAVID J. MALAN: Bring us home.
+Couple more steps.
+What's next?
+Steps 12.
+Step 12.
+Yeah?
+>> AUDIENCE: Put one of the slices of bread gently on one of your hands.
+>> DAVID J. MALAN: One of your hands.
+And then, step 13.
+Yeah?
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: --on slice of bread.
+Good.
+Pretty good.
+Step 14, yeah.
+>> AUDIENCE: Undo step 13.
+>> DAVID J. MALAN: Undo step 13.
+Let's move on to jelly.
+It's a 100- step program, but we're were on step 15.
+Yeah.
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: 7 through 13 using the jelly, because those went so well.
+Repeat steps 7 through 13, using the jelly.
+So grasp the lower half of the jelly jar with one hand on top.
+On the other hand of the other top, ignoring that part,
+grasp with opposing hands, the lid and the plastic jar
+at the bottom, and twist for two seconds.
+Then open the jelly jar.
+And lastly, let's try to give us something edible.
+Step 16.
+So why don't we leave it there.
+Thank you so much to our three volunteers.
+[APPLAUSE]
+>> We have a little CS50 stress ball for you.
+It was going to be a sandwich but-- so what
+was the point, beyond having a bit of fun with the algorithm?
+But the reality is that even when you're programming a computer,
+you need to be super precise.
+As complex or intimidating as your own computer
+might very well be to you, at least when something goes wrong,
+the reality is it's a pretty dumb device that was invented by us humans,
+and can only do a subset of what we do-- sometimes certainly faster--
+but it doesn't know how to make assumptions.
+It doesn't know how to be on the same wavelength as you.
+>> It will only do precisely what you tell it.
+And you'll be struck, perhaps, as we start
+writing actual code with the first problem sets and beyond,
+just how easy it is to make an assumption as a human,
+and not anticipate I need to handle that case, or that corner case,
+so to speak, that might very well arise if for instance Sam had the only
+squeezable jar of jelly, whereas everyone else had some glass jars as
+well.
+So before we turn our attention to some actual code,
+allow me to introduce the course's heads here at Yale.
+Our friends Scaz, Andy, and Jason to come up and say hello.
+>> [APPLAUSE]
+>> SCAZ: We've lost Jason temporarily.
+Hi again, everyone.
+My name is Scaz.
+I've been teaching at Yale since 2001.
+And when I am not teaching, my research is in robotics
+and artificial intelligence.
+>> And the announcement that I have today is that starting in a couple of weeks,
+we're going to be bringing some supplementary material to CS50 to talk
+about intelligence software.
+We're going to talk about how places like Netflix and Hulu
+can recommend movies which you might want to watch.
+Where we'll talk about how driver-less cars actually work.
+And we'll be able to ground these things in the concepts
+that you're learning in this class today.
+>> Because all of these things are built upon the same foundation.
+And that's what this series will explore.
+So I'm really looking forward to seeing more of you
+all, and you're going to get to see more from all of us very soon.
+Let me then introduce Jason.
+>> JASON: Hi everyone.
+My name is Jason.
+I unfortunately went to Harvard as an undergrad.
+That's going to get cut out of the actual stream.
+>> And now I'm here as a lecturer in the computer science department.
+And I'm helping run the course with Scaz, David and Andy.
+>> ANDY: Hey guys.
+My name's Andy.
+I am actually the only Yale student on the stage right now.
+>> [APPLAUSE]
+>> I'm in Berkeley College, originally from Solon, Ohio.
+And I was one of those kids where, when I came to Yale,
+I really thought that I would never have to look at a number ever again.
+And then I realized that you needed both science and QR credits to graduate.
+And so my freshman spring, I took a class, a CS, intro CS class here
+at Yale.
+I was like, this is like actually pretty cool.
+>> And while I actually ended up declaring as a global affairs major, the skills
+I learned in CS and programming are so applicable to any field
+you choose to do.
+And the staff here at Yale, we've been so hard at work
+to prepare for you guys.
+And we look forward to seeing all in section and office hours.
+So yeah.
+>> [APPLAUSE]
+DAVID J. MALAN: Thank you.
+So just before class began, we had an opportunity
+to walk around campus with a cellphone and take
+some selfies in video form of really my first tour of Yale's campus here.
+And so we thought we'd share a rough cut of exactly this as Scaz and Andy
+and Jason took me around campus.
+[VIDEO PLAYBACK]
+[SIRENS]
+-David.
+-Welcome to Yale.
+-Good to see you.
+-Nice to see you.
+-Can we go on a tour?
+-Let's go on a tour.
+-Road tour.
+-This sign has been there for a while.
+-Whah, CS50.
+>> -Hurry!
+Go, go, go, go.
+You should [INAUDIBLE] Harkness Tower.
+>> -And we saw that a couple times.
+>> [APPLAUSE]
+>> -Look out for the bike!
+Ahh!
+Hi Frank.
+>> -What's up, guys?
+-How are you?
+-Good to see you.
+-Welcome to the video.
+Don't act too excited.
+>> -I love Silliman.
+Ahh!
+>> -It's been about three hours since Jason had ice cream and Nutella.
+So we've got to stop back at Silliman for a little bit.
+>> -It's not even [INAUDIBLE] yet, just the fact
+that they have it here is so amazing.
+Dude, there's Nutella at every meal.
+>> -There was last year too.
+>> -Yeah.
+>> -tell much about Yale so far.
+But I do now that's TD over there.
+And that's considered off campus.
+>> -Here we have gothic architecture.
+World famous.
+We have some more gothic architecture.
+And construction, and more gothic architecture.
+Hi.
+This is where we're having office hours Tuesdays through Thursdays in Hogwarts,
+as [INAUDIBLE] .
+-All right.
+That's it for the tour.
+We are at Yale University's Law School, where
+today's lecture is about to take place.
+Let's head in.
+>> [END PLAYBACK]
+>> DAVID J. MALAN: And that brings us here now.
+So thus far, we've been focusing on pseudocode,
+which is this English-like syntax.
+It has no prescribed specification.
+It's just you use some intuitive language if you
+want to explain what you want to do.
+>> But let's begin now to transition to code, as most people would say.
+But more precisely, something known as source code.
+This is the language that humans write that computers ultimately--
+possibly after some number of steps-- ultimately understands
+so as to know how to do something.
+That you saw a glimpse of this perhaps on Wednesday.
+>> This is an example that incredibly, underwhelming
+when run simply says "hello world."
+And it's written in a language called C, which is syntactically very similar
+to a lot of other languages that you might not know,
+but might have heard of like Java, and C++, and Python, and Ruby,
+and the like, and indeed, we'll spend much of the semester using C,
+and then toward the end of the semester, building upon it,
+and introducing any number of other languages.
+Among them PHP, and JavaScript, a database language called SQL.
+But with C, what we'll have this bottom-up understanding
+of exactly how computers work, what you can do with them,
+and how you can solve problems all the more effectively by this
+layering that we discussed on Wednesday, and standing
+on the shoulders of others.
+But more on that to come.
+>> Today we look at a simpler environment, but a fundamentally identical
+environment known as Scratch by our friends at MIT Media Lab.
+This is a graphical programming language, Scratch,
+whereby you can drag and drop things that
+look like puzzle pieces that only interlock if it makes
+logical or programmatic sense to do so.
+But it's going to allow us to have a conversation about all
+of the same programming fundamentals that some of you
+might know already, that many of you might not
+know anything of without having to get bogged down frankly,
+in the intellectually uninteresting syntax of semicolons,
+and parentheses, and quotes, and the like.
+All of which, early on, are a distraction
+to what are interesting and genuinely useful ideas.
+So let's take a quick glance at the environment
+here, so that you know what awaits.
+And in fact, among the games we can play are a few programs written
+by CS50's own former students.
+One of them, myself, I'll be this one written in graduate school for me.
+>> If I could take one volunteer who's willing to play
+a game for the very first time.
+Sure.
+Come on up.
+What's your name?
+>> AUDIENCE: Angela.
+DAVID J. MALAN: Angela, come on up.
+So Scratch has been out for a few years.
+And when I was in graduate school, I was cross registered at MIT,
+taking professor Mitchel Resnick's course on educational technologies.
+And we were among the very first students in the world to actually beta
+test Scratch.
+And my project was what Angela has now graciously volunteered
+to play called Oscartime.
+>> So I'm going to go ahead and double click the icon here.
+It's going to open up a programming environment that we'll soon dive into.
+I'm going to full-screen it for Angela, here.
+I'm going to hit the green flag in just a moment.
+And then a whole lot of trash is going to fall from the sky.
+And you're going to use the mouse here to actually drag and drop
+the trash into Oscar's trash cans.
+So if you want to go ahead and click the green flag, the game will begin.
+>> [MUSIC PLAYING]
+>> Oh, I love trash.
+Anything dirty or dingy or dusty.
+Anything ragged or rotten, or rusty.
+Yes, I love trash.
+If you really want to see something trashy, look at this.
+I have here a sneaker that's tattered and worn.
+It's all full of holes holds and the laces are torn.
+A gift from my mother the day I was born.
+I love it because it's--
+DAVID J. MALAN: --green these days just be throwing everything in the trash.
+And so what one of CS50's own staff did--
+Jordan, who you might meet today-- has actually
+updated this for today's times.
+And so allow me to open up a remix instead for Angela.
+And we'll play this instead for a few moments where now you're
+going to have to decide between whether to throw something in the trash,
+or recycle it or compost it.
+So there's a bit of pressure on you to get
+this right in front of your 392 to 497 classmates here in the hall,
+if you would.
+[VIDEO PLAYBACK]
+[MUSIC PLAYING]
+-Oh I love trash.
+Anything dirty or dingy or dusty.
+Anything ragged or rotten or rusty.
+Yes, I love trash.
+>> If you really want to see something trashy, look at this.
+I have here a sneaker that's tattered and worn.
+It's all full of holes and the laces are torn.
+A gift from my mother the day I was born.
+I love it because it's trash.
+>> Oh, I love trash.
+Anything dirty, or dingy, or dusty.
+Anything ragged or rotten or rusty.
+Yes, I love trash.
+Here's some more rotten stuff.
+I have here some newspaper--
+>> [END PLAYBACK]
+DAVID J. MALAN: --are actually compostable.
+But thank you to our volunteer, Angela.
+We have a stress ball for you here as well.
+So thank you.
+>> So this one was written by me.
+But now one by an actual former student who implemented this, which is a game.
+All in this language called Scratch, that we'll soon
+peel back the layers of.
+But if we'd like-- how about another volunteer?
+Right.
+>> Come on up.
+What's your name?
+Glance?
+Lance.
+Lance, come on up.
+Nice to meet you.
+Come on this way.
+So this one might have a theme familiar to some of you.
+But you'll see too that there can be interactivity,
+whereby you could actually be the role of the character moving around.
+Nice to meet you.
+David.
+>> I give you, Pikachu.
+Instructions will about to come on the screen.
+But in short, you're going to want to catch the tasty stuff,
+and avoid the bombs and other things.
+With the cursors entirely.
+So hit the space bar.
+-Pikachu.
+DAVID J. MALAN: Catch the stuff on the left,
+don't catch the stuff on the right.
+>> [MUSIC PLAYING]
+>> So one last one here.
+If we could have one more volunteer here.
+We thought we'd recreate something from-- in the yellow shirt--
+from Wednesday.
+What is your name?
+Mary, come on up Mary.
+>> And recall on Wednesday we introduced the notion of binary, and binary bulbs.
+This is actually now an implementation of that same interface
+that we had on the iPad with the light bulbs, but here digitally rendered.
+And rather than do a stress ball-- nice to meet you, David.
+We brought a few light bulbs from Cambridge.
+>> If you can, clicking on those bulbs to turn them on and off,
+come up with the binary representation of say 256.
+And you'll see in the middle, the current tally.
+So that one's on.
+So the leftmost bit is on.
+>> MARY: Yeah, [INAUDIBLE]
+>> DAVID J. MALAN: Well, so we have just-- oh.
+So this is the 128 column.
+So we're up to 128.
+We got to get to 256.
+And you can tinker on and off, no big deal.
+Or you can hit that 128 more times if you want.
+>> All right, good.
+24.
+Yeah, getting closer.
+Closer!
+Oh, what's the problem then?
+So what's the issue?
+>> So what do we need to solve this problem?
+So we need another bit.
+And this is perfectly reasonable in reality, right?
+If you want to count from the number 1 to 2 to 3 to 4 to 5, 6, 7, 8, 9
+to actually roll over to 10, you're going to need an additional bit.
+So let's actually rewind here, and come up
+with-- that was obviously meant to be a set up.
+>> You can't do 256 with just a bulb.
+So how about simply the number 50?
+Number 50.
+Excellent.
+A big round of applause for Mary and hers as well.
+Thank you.
+>> So this topic-- intentional as that was-- will actually recur.
+The largest value that you can represent with eight bits, or one byte,
+is indeed 256.
+But not if you start counting from 0, as we
+seem to keep doing by having all of those bits off.
+But now let's dive into the underlying implementation of this environment,
+and tease apart some of these ideas.
+>> So in a moment we're about to see a few different programming fundamentals.
+The first of which we'll call statement.
+Sort of verbs, if you will.
+Actions.
+Things that should be done.
+>> And in a moment you'll see blocks that look like this.
+Say "hello world," for instance.
+Or wait one second.
+Or play sound meow.
+And indeed the environment in which we're going to be doing this
+is called Scratch.
+>> And if I pull up Scratch without preloading any actual code,
+let's take a quick look at this user interface, so to speak.
+The controls with which we interact.
+On the top left here of the screen, below the menus,
+we have the stage, so to speak.
+So Scratch is what we'll call Sprite.
+It's a character.
+>> And he can be controlled by writing programs against him.
+And he'll be able to move up and down and left and right in this environment,
+not just by moving the mouse, but programmatically.
+I can tell him walk right, walk left, up, down or the like.
+And I can introduce other sprites or characters as well.
+>> Indeed, on the bottom here is where you'll see your list of sprites.
+At the moment, I just have one, but I can create more,
+and they'll appear exactly down there.
+So if you rewind for a moment, like Oscartime-- for instance, Oscar,
+on the left, the trash can, was a sprite.
+And the thing in the middle, the recycling bin, was another sprite.
+And the compost bin was another sprite.
+And every piece of garbage or recyclables
+that was falling from the sky is also a sprite, each of which
+was programmed individually.
+>> How do you program?
+Well, over here on the right hand side is the scripts area.
+And this is where we can drag and drop puzzle pieces.
+In a week, it's going to be where we equivalently write code
+with more of a keyboard, but for today it'll be dragging and dropping
+puzzle pieces, the palettes for which can all
+be found here right in the middle.
+Indeed, in the middle here there's a whole bunch
+of categories of puzzle pieces or blocks.
+One's related to motion, look, sound, a pen going up and down,
+data, events control.
+Not quite sure yet what all of these mean,
+but you'll see that they've been nicely categorized.
+And to write a program in Scratch, let's do exactly that.
+>> I'm going to start off under Events, and drag this one here.
+When green flag clicked.
+Now why that one?
+Well recall that our volunteers came up, the first thing I
+or they did was click that green flag in the top right hand corner.
+And that just means start the program.
+>> So when that event happens, what do I want to do?
+I'm going to go under Looks, and I'm going to do "say hello."
+And I'm going to change this and say something like "hello Yale."
+And now I'm going to zoom out, click the green flag,
+and voila, I've written a program.
+It's not all that exciting just yet, but this
+is exactly where each of those author started,
+both with Pikachu, and the binary bulbs, and Oscartime,
+and so many more examples.
+>> You start super simple, and then you start to layer,
+and add on features and functionality.
+So what are these layers going to consist of?
+Well, beyond statements, we'll also have things that are little more fancily
+called Boolean Expressions, after someone named Bool.
+And a Boolean expression is simply an expression that's either true or false,
+yes or no, 1 or 0.
+>> Any polar opposites like that.
+It's either true or not.
+But we're also going to see ones that might look like this.
+So for instance, is the mouse down?
+They're sort of questions, if you will.
+>> The mouse is either down, true or it's not, false.
+1 or 0, if you will, tends to be the mapping.
+True is 1, false is 0.
+Well what about less than this?
+Or so, is this less than this?
+That's a question of sorts.
+>> And if you put two numbers in there, either x
+is going to be less than y or equal to y, or greater than y,
+but this block we'll see, is just going to answer the question,
+is this less than that?
+We might also see something like this.
+Touching mouse pointers.
+So in Scratch, you can ask the question, is the Sprite
+touching the mouse pointer?
+Other words, is the cursor hovering over the cap, or the equivalent?
+>> We'll see anding things together.
+You can ask two questions, and make sure that both of them
+give you yes or true answers before making a decision to do something.
+But then how do you make decisions?
+Well, we have these conditions.
+>> And we saw this in our example of the phone book.
+Looking to the left or right for Mike Smith.
+And in the condition, you do something potentially,
+if a Boolean expression is true.
+>> And indeed, notice the shapes now.
+There's this placeholder right now on the overhead where we can fit--
+if I rewind one slide-- that shape.
+It's not quite the same size.
+And indeed, you'll see that Scratch resizes things dynamically
+to fit puzzle pieces, but the shape is what's important.
+This thing looks like that, and indeed it's
+roughly the same shape that should fit in there.
+And if we want to do something this way or that way, if or else,
+we have this puzzle piece in Scratch as well.
+>> Now suppose you wanted to do if, else if, or else.
+In other words, a three-way fork in the road.
+Well what can you do just by glancing at this?
+I can take this puzzle piece, and it doesn't seem to fit,
+but again, Scratch is going to re-size nicely for us.
+I could start to layer these things together.
+>> So now I have a three-way fork if this is true, do this.
+Else if this other thing is true, go this way, else go this other way.
+And in The Muppet Movie, the fork in the road, so to speak,
+between Yale or Stanford, was exactly that, just two conditions.
+Either go this way, else go that way.
+>> Well, loops also exist in programming.
+And we've used these already in class and in pseudocode code,
+and surely in those Scratch programs forever.
+Scratch has this puzzle piece that will just let you do something forever.
+And sometimes you want to do something forever.
+It's not necessarily a bug, it's because you want a clock to keep going,
+or a game to keep playing.
+Or you can specify a finite number of steps, as with this repeat block here,
+which will repeat something 10 times.
+We can set variables, we'll soon see.
+And with variables, similar in spirit to algebra, like x, or y, or z.
+It's something symbolic that can store some value, some piece of information,
+that you might want to remember for later.
+>> Best example of this might be a game where you have a score,
+like in Pikachu.
+How many pieces of cake and whatnot did you catch?
+Well, that might be a variable called score that starts at 0.
+And then every time we caught a piece of cake or candy, or the like,
+it gets incremented.
+It gets added to one at a time.
+And so a variable stores a piece of information like that.
+Then there's arrays, and we'll come back to these in a week or two time,
+but an array is kind of like an inventory or a satchel, inside
+of which you can put virtual things.
+It allows you to store more than one piece of information.
+And that might be useful if in the game, you're
+sort of walking around picking things up.
+And maybe you want to keep all of those pieces of cake
+around, and not just eat them one after another.
+And then there's a fancier construct we'll
+come to called functions or procedures.
+And though we're going faster here, we'll
+see that these are a very natural solution to problems
+that we're going encounter.
+As our programs start getting bigger we'll
+start to notice patterns in the code that we're writing,
+the puzzle pieces we're dragging and dropping.
+And as soon as you notice yourself doing something again and again, or worse yet
+copying and pasting programming code that you've written,
+that's probably an opportunity to factor out
+whatever you keep copying and pasting, and putting it
+in something called a "function."
+But more on those in much more detail before long.
+>> And then there's even fancier features.
+For those of you more comfortable, or taking APCS or equivalent,
+Scratch actually supports things like threads and events and more.
+So realize that it has a fairly high ceiling,
+even though it's also very broadly accessible to folks
+who have never programmed before.
+So indeed, let's take a look at a simple program or two.
+>> We already looked at how we might say hello with Scratch.
+Let me go ahead and open up a little more interesting program
+that I wrote in advance.
+And this one's called Pet the Cat.
+All of these programs will be available on CS50's website.
+Indeed, already there.
+>> So you can download them, and play with them,
+and with Problem Set 0, which is also on the course's website,
+you're encouraged to walk through these.
+And moreover, we have a number of walk-through videos
+online in which I and CS50's team truly walk
+through each of these examples at a much slower pace, a very fast forwardable,
+or rewindable pace, so that you can walk through these at your leisure as well.
+So here's Scratch on the left.
+Here's a program at the right that I've already pre-made.
+So let me zoom in on this.
+And could someone in English, knowing what you know, just from now as
+to how Scratch works, sort of say in an English phrase or sentence,
+what does this program apparently do?
+>> Yeah, in orange shirt.
+>> AUDIENCE: [INAUDIBLE]
+>> DAVID J. MALAN: Yeah, if your cursor is on Scratch the cat,
+play a meowing sound.
+But notice how we express that.
+There's apparently a loop there, forever.
+And then there's a condition, the if expression.
+And collectively, what do those mean?
+It means this program is just always running,
+and it's just always waiting and watching and listening
+for me to move my mouse over the cat.
+>> Because each time I do that, as you propose, it's going to do this.
+Let me start the program.
+Nothing seems to be happening, but notice how
+it's highlighted now in a yellow line.
+That just means it's running.
+And because there's a forever loop, it's still running.
+>> So let me move my cursor over Scratch. [MEOW] [MEOW] And if I move it off,
+[MEOW] now it stops, but the program's still running. [MEOW] And so, adorable.
+[MEOW] So let's open up slightly more advanced
+example called Don't Pet the Cat.
+>> And now let's see what happens here. [MEOW] Meowing.
+So it's a little on auto pilot, if you will.
+--pet the cat.
+I wonder why.
+[ROAR] [MEOW] So how did this work?
+Well, you can kind of reason through it intuitively, perhaps.
+>> But let's look at the actual code.
+So again, when the green flag is clicked, do this forever.
+What do you want to do forever?
+Well, if touching mouse pointer, then play
+a sound that's apparently called Lion 5, that's inside of this project, else
+play sound meow, and then wait two seconds, so
+that it's not meowing incessantly.
+In fact, you can very quickly start to annoy yourself and your roommates.
+>> Let's remove this block.
+And notice what's nice about Scratch.
+Things just kind of drag and drop and interlock.
+So again, it grows to fill what you want.
+But if I remove this, and then hit play, [COMPUTER BLIP SOUND]
+>> --it's kind of tripping over itself, because it's literally
+doing what I'm saying.
+It's saying forever play this sound, but I'm not giving it a chance to finish.
+And so that would be a bug.
+And that's why we had this thing in here now.
+So let's actually start from scratch-- sort of pun slightly intended--
+in which we now have the cat move.
+>> So I'm going to do this on the fly.
+I'm going to zoom in here, just to get me started on Events.
+And green flag clicked.
+And there's other ways to start the scripts.
+We're going to keep it simple here.
+>> And now I'm going to go ahead and go under Control.
+And again, if you forget where things are, just click around,
+and eventually you find them again.
+So I want to forever do what?
+I want to use the motion block that I know exists, move 10 steps.
+>> So let's see what happens here if I play this game.
+Thankfully it doesn't go too far.
+I can still kind of grab him by the tail and pull him back.
+But the program's still running, so he's kind of fighting me.
+But it'd be kind of nice if I conditionally fix this in code.
+>> Because this is not-- actually this is really
+not a fun game for anyone of any age.
+So let's try to fix this by having some kind of conditions.
+So I'm going to go under Control, and then if.
+I like this idea.
+So after moving 10 steps, if-- let me sense where I am.
+I'm going to go under Sensing, and then it looks I can go here.
+row to the shape matches.
+>> Size doesn't, but it's going to grow to fill.
+And now this is a little menu.
+And now mouse pointer-- I don't want the mouse, I want the edge.
+So Scratch is smart enough to know when a sprite is touching the edge.
+What do I want him to actually do?
+>> Let me go ahead and change motion.
+You know what?
+I'm going to have him turn around.
+So at 15 degrees isn't really going to help me.
+I want him to turn around and go the other way.
+>> So let's see what happens here, if I hit Play now.
+OK, kind of stupid looking, but it's doing exactly what I said.
+And it's rotating the whole sprite.
+Now it turns out I can fix this.
+And I didn't know how to fix this at first.
+I kind had to futz around and see the best way to do this.
+But if I go to-- let's see, motion.
+Oh, I found this.
+Actually, Set Rotation Style.
+Left, right, or don't rotate, or all around.
+And it turns out that's what I want.
+And I'm going to put this is not my loop, because I don't need to set
+the rotation style multiple times.
+I'm going put it at the very top of this program so that it gets set once,
+and then remembers.
+And now I'm going to try this again.
+Let me stop the program.
+>> And now that fixed that bug.
+So I'm iteratively improving upon this.
+The program is getting a little more complex and bigger,
+but I'm taking baby steps so to speak, and small bites out of the problem
+to get it better and better.
+But this too, is kind of lame.
+>> You know what?
+Would ask someone with a really good, frightful voice like to come up?
+Someone with a voice.
+Uh, yeah.
+Come on up.
+In the green shirt.
+>> So it turns out there's some other fun things, aesthetics and sounds alike.
+Here's the meow.
+I click on the Sounds tab.
+[MEOW] There's the meow. [MEOW] [MEOW] [MEOW] --actually record something
+of our own here.
+>> So let's do exactly that.
+Instead of using this cat sound, let's go ahead here, and what's your name?
+Nick, nice to meet you.
+It's David.
+So in a moment, I'm going to hit the Record button.
+And if you can just yell into the laptop,
+"ouch," as though you just walked into the wall,
+that will be much appreciated.
+1, 2.
+>> NICK: Ouch!
+DAVID J. MALAN: Awesome.
+And now can do a little editing here.
+Going to get rid of the quiet parts.
+And I think that's good.
+Thank you very much.
+>> NICK: Pleasure.
+DAVID J. MALAN: I've just renamed it "ouch,"
+but now I'm going to go back to my scripts.
+And notice there is indeed sound here.
+And I'm going to go ahead and play the sound ouch,
+and I'm going to do that if it's touching the edges only.
+And then I'm going to have it turn around.
+So let's see what happens here.
+Let's go full screen.
+[VIDEO PLAYBACK]
+-Ouch!
+Ouch!
+Ouch!
+Ouch!
+Ouch!
+Ouch!
+Ouch!
+Ouch!
+>> [END PLAYBACK]
+>> DAVID J. MALAN: So you realize that we're getting a little lucky.
+I'm going to have him move like 100 steps at a time.
+The effect of which now is going to be-- [COMPUTER GLITCH SOUND] So
+within reason.
+So an opportunity to refine that further if we really want to.
+>> So now let's introduce another concept.
+To let me go into one called Counting Sheep and use something
+called a variable.
+This is an adorable little sheep, and I changed his costume so to speak.
+So even though the default is a cat, you can upload, you can draw,
+you can do any number of characters on your sprite.
+Here's a program that's going to do what in English?
+>> Based again on just what you know now.
+What's this program do?
+Yeah, it's going to count.
+One number at a time.
+We have apparently have this set counter.
+>> I don't know what that is, but maybe it's a variable.
+It's just a container, x or y.
+But the word counter is more descriptive than mathematician's x or y.
+So we can use English words for things.
+Forever, just means keep doing this.
+>> Say counter.
+Now where did this come from?
+Well, it turns out that counter is a variable.
+So it's just another puzzle piece I created in advance.
+And even though it happens not to be the same shape here,
+normally you would say something like hello here.
+>> You can also drag a variable so that that's what's get said.
+Then I wait for a second, I change the counter by one,
+incrementing it by adding one.
+So that the net effect is this adorable counting sheep.
+Though he's counting himself.
+Now it's very quickly going to get boring
+because he's going to do this truly forever,
+but that's exactly what the program's design prescribes.
+Lets now try another example that leverages a variable.
+This one called Hi Hi Hi, that does get annoying quickly.
+Now this one has two scripts.
+And so again, we're taking baby steps.
+>> We started with something super small, added to it, added to it.
+Now I want to do something even more dynamic,
+so I want to be listening for two different things at a time.
+So on the left, when green flag is clicked,
+I set a variable that I wrote in advance called Muted.
+And I arbitrarily set it to 0.
+So Scratch doesn't have true and false, but it does have 0 and 1.
+>> So I can approximate that same idea.
+And then forever, if the space bar is pressed, then set the variable to 0.
+Or sorry.
+If the Space is pressed, and if muted, the variable, is 0,
+then set muted to 1, else set muted to 0.
+This seems sort of like we're just doing and undoing work.
+>> But what's the effect?
+Every time I hit the space bar, what happens to my variable
+called muted, logically?
+Sort of gets flipped.
+It changes from 0 to 1, or 1 to 0.
+So it took a few blocks to express that, but all
+I'm doing is toggling the state of this variable to 0 or 1, or 0 or 1
+each time I hit the space bar.
+Now over here, what's this doing?
+Forever, if muted is 0, so if muted is false.
+So if it's not muted, is the semantics there, play sound sea lion,
+and think Hi Hi Hi for two seconds, wait two seconds.
+So notice now these scripts are effectively
+going to run in parallel so that one can be listening for one action, the other
+to make a decision based on that action.
+And it can do this forever.
+>> [SEA LION BARKING]
+>> [SEA LION BARKING]
+>> It's going to do this forever and [SEA LION BARKING] as I've just done.
+And now it's still running but I've "muted" the game.
+[SEA LION BARKING] And that's all this guy does now too.
+>> Let's open another example here.
+Let me go into Events, and now this adorable too.
+But notice it has two sprites.
+So not just two scripts with one sprite, but two sprites.
+And if I click on the blue guy as I already have, I see he as one program
+up here that literally just says this, when I receive an event,
+say "Polo" for two seconds.
+>> So if you've ever played in a pool, the game Marco Polo,
+if the orange guy script is any indication, apparently
+every time I hit the space bar, what's the orange guy going to do?
+He's going to say "Marco."
+And then this is a new block.
+We've not seen this before, but broadcast an event.
+And I could call it event anything we want.
+>> We'll come back to this perhaps before long.
+But broadcasting an event is a way for one sprite
+to talk to another by essentially passing it a message.
+It's not a message you see.
+It's not something visual.
+It's sort of a computer message that the other guy is listening for.
+Because indeed, the blue guy, recall doesn't have when green flag clicked.
+>> He instead has, when I receive an event.
+When he gets handed this note in class, so to speak, he should say "Polo."
+And so the net effect is that when I hit the green flag, nothing happens.
+But when I hit the space bar, he says "Marco," he responds with "Polo."
+But the only sprite I'm interacting with is the orange one.
+So this is a way of kind of passing messages between sprites
+and having them communicate with one another.
+>> Now let's look at one last one here called Threads.
+And notice this by playing it.
+So these are two sprites.
+The bird is kind of flying around.
+He's bouncing.
+There's no "ouch," but same idea.
+>> But the cat seems pretty smart.
+What is the cat apparently doing?
+And wait for it.
+What is the cat apparently doing?
+It's not just bouncing.
+>> He's following the bird.
+And so apparently, there's a way with a combination of blocks here--
+and let's look at the cat real fast.
+Forever, if touching bird, then play the sound Lion 4, whatever that is.
+We heard it once.
+Otherwise, point towards bird, and move one step.
+Now the fact that it's one step is what gives the bird
+a bit of an advantage initially, but if we instead
+make this 10, for instance, so that every iteration of loop he's
+moving 10 steps of time.
+So more space.
+Let's see what happens then.
+[LION ROAR] Not all that much better.
+So now let's try to improve upon these a little iteratively,
+and come back to that notion of a function.
+>> And indeed one of the fundamental takeaways of the class design.
+Not just writing programs that work and that are correct, but are well
+designed.
+And design is much more subjective, and you'll get better at it over time.
+But let's take some baby steps toward starting with a program that works,
+absolutely, but it's not very good.
+It's not very well written.
+>> So here's a program that does this.
+Cough, cough, cough.
+What does the program look like?
+Looks correct to me.
+It's saying couch for a second, then it waits.
+>> Then it says it again, then it waits.
+Then it says it again, then it waits.
+And then the program implicitly ends, because there's no loop.
+But why is this a badly written program?
+Even if you've never programmed before?
+Like, what rubs the wrong way, perhaps here?
+Yeah?
+>> AUDIENCE: [INAUDIBLE]
+DAVID J. MALAN: Exactly.
+You're repeating yourself again and again.
+And literally, I copied and pasted two of those blocks again and again.
+And that's exactly the sort of sanity check that you should be making.
+Wait a minute.
+Should I really be doing this?
+So what's this what's the obvious solution perhaps?
+Have some kind of loop.
+And I don't quite recall what the puzzle piece is,
+but if I look at the next iteration here,
+indeed, there's not just the forever loop,
+there's repeat some number of times.
+And so I've specified three.
+And now notice how much tighter, how much more succinct this program is.
+And in a sense, how much more maintainable.
+If I want to change the word from cough to something else,
+like achoo, like he's sneezing.
+Then I change it in one place, and not three.
+So this already feels like slightly better design.
+Let me instead open cough 2, our third example.
+>> Notice as a computer scientist, I start counting at 0, typically.
+Now this looks a little scarier at first, but the effect is the same.
+Cough, cough, cough.
+But what seems to be fundamentally new in the top part of the program?
+I've removed the say.
+>> I've removed the wait.
+And what have I plugged in instead?
+A function.
+A cough block.
+I mean, frankly, I seem kind of an idiot if I didn't just
+start with the block that's apparently called
+"cough," if that's all I want him do.
+But that doesn't exist in Scratch.
+Rather I went to one in the palette called More Blocks here,
+and I drag this big purple thing here that lets me define a function.
+It essentially lets me create my own puzzle
+piece that can be called anything I want, that can do anything I want,
+but it gives it a name.
+It gives me a new, purple puzzle piece that now does whatever I tell it to do.
+So this purple piece here corresponds to this one here.
+>> And what does it do?
+It says cough for a second, and then it waits.
+And now I've sort of created my own custom puzzle piece,
+so that it behaves exactly that same way.
+So I can keep doing this.
+And indeed, there's going to be more and more opportunities for modularization,
+and for layering, complexity on top of one another.
+But this basic idea, indeed in problem said 0.
+What you're going to be challenged to do is
+to download Scratch, or just use it on the web, and just have fun with it.
+We'll give you a set of requirements, having a sound,
+and some number of puzzle pieces.
+But you'll do exactly this.
+And you'll realize that you're going to want to take some baby steps initially,
+until your program gets more and more complex.
+But considering is this the best way I could do this?
+Can I avoid this instinct perhaps, to copy and paste?
+>> But before Problem Set 0, and before we adjourn,
+thought we'd take up one more volunteer if we could,
+for a final program that's perhaps the most
+fitting at all, given today's venue.
+Come on down.
+Yeah.
+Yes.
+What's your name?
+Uh-oh.
+That's OK.
+Both come down.
+And I've will deal with this somehow within that next ten seconds.
+So come on down.
+Come on down.
+>> Let me come on up here.
+Come on.
+All right.
+Let's see here.
+So notice real fast here, if you'd like to come on up.
+>> We'll do two rounds of this.
+And what's your name?
+>> SABRINA: Sabrina.
+>> DAVID J. MALAN: Sabrina and?
+>> YING GEE: Ying Gee.
+>> DAVID J. MALAN: Ying Gee.
+Nice to meet you both.
+David.
+So our final example here is called Ivy's Hardest Game.
+And why don't we have you do Level 1, and you do Level 2.
+>> And we'll see how far beyond that we actually go.
+Written by a student last year, remixed by me
+so that this would go over well in New Haven.
+And I give you a game that's going to involve moving the arrows up and down,
+and getting Yale to the finish line.
+Here we go.
+>> [VIDEO PLAYBACK]
+>> [MUSIC -- NFL ON FOX THEME SONG]
+[MUSIC -- MC HAMMER, "U CAN'T TOUCH  THIS"]
+>> -U can't touch this.
+U can't touch this.
+Can't touch this.
+My, my, my, my music hits me so hard, makes me say, oh, my lord.
+Thank you for blessing me with a mind to rhyme and two hype feet.
+>> That's good when you know you're down.
+A super dope homeboy from the Oaktown.
+And I'm known as such and this a beat uh, you can't touch.
+I told you homeboy U can't touch this.
+Yeah, that's how we're living and you know U can't touch this.
+>> Look in my eyes, man.
+U can't touch this.
+Yo, let me bust the funky lyrics.
+U can't touch this.
+Fresh new kicks and pants.
+>> You got it like that and you know you wanna dance.
+So move out of your seat and get a fly girl and catch this beat.
+While it's rolling hold on pump a little bit and let them know what's going on.
+Like that.
+Like that.
+>> Cold on a mission so pull on back.
+Let them know that you're too much and this is a move uh you can't touch.
+Yo, I told you U can't touch this.
+Why you standing there man?
+U can't touch this.
+>> Yo, sound the bell school's in, sucker.
+U can't touch this.
+Give me a song, a rhythm making them sweat that's what I'm giving them now.
+They know when you talk about the Hammer you talk about a show that's hyped.
+And tight singers are sweating so pass them a mic.
+>> Or a tape to learn what it's going to take and now
+he's going to burn the charts.
+Legit either work hard or you might as well quit.
+Because you know U can't touch this.
+U can't touch this.
+Break it down.
+Stop.
+Hammer time.
+Go with the flow in a spin if you can't move to this
+then you probably are dead.
+So wave your hands in the air [INAUDIBLE]
+>> This is it for a winner dance to this and you're going to get thinner.
+Move slide your rump just for a minute let's all do the bump.
+Yeah.
+U can't touch this.
+>> U can't touch this.
+You better get hyped boy U can't touch this.
+Ring the bell school's back in.
+Break it down.
+Stop.
+Hammer time
+>> DAVID J. MALAN: That's it for CS50!
+Thanks so much for joining us!
+See you outside.
+>> [END PLAYBACK]
+[VIDEO PLAYBACK]
+[MUSIC -- "SEINFELD" THEME SONG]
+-Hey David.
+-Hey, David.
+How's it going?
+>> -Good job, today.
+-So have you thought about what you're going to do for the out jokes?
+-No, I got nothing.
+-What if-- what if this is the out joke?
+-Like, unpacking carts?
+-Uh-huh.
+You know, it's about nothing.
+>> -So like, no story, no conflict, no resolution.
+I don't understand.
+What's it about then?
+>> -Nothing.
+>> -So we have out joke is about nothing, and we have no actors.
+Who's going to be in this?
+>> -No, no, no.
+I mean, I'll be in it.
+>> -You'll be in it?
+-Yeah!
+People are always telling me I'm a character.
+>> -Well, I mean, it's true.
+But who else is going to be in it?
+It can't just be you.
+>> -You will be in it, Gavin, Dan, Dan, Colton, Z'Myla, Alysse, Doug,
+David, everybody.
+>> -So it's about nothing, and everybody's in it?
+>> -Absolutely nothing.
+>> -This is ridiculous.
